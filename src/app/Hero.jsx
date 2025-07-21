@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div>
       <h1>hello sanket</h1> 
-      <h1>hello PruthviraJ </h1>
+      <h1>hello Raj </h1>
 
     </div>
   )
