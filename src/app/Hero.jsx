@@ -36,15 +36,18 @@ const Hero = () => {
           <h1 className='text-[5vw] font-bold text-[#FFD506]'>Run RamScript </h1>
           <h1 className='text-[5vw] font-bold text-[#FFFFFF] leading-15'>Once, and You’re Set. </h1>
           <div className='mt-20 flex flex-col md:flex-row gap-10'>
-            <Link href="/contact" passHref>
-                <span className=" font-medium text-black bg-[#FFD506] px-5 py-3 rounded-xl  cursor-pointer">
+            <Link href="/contact" passHref className='flex items-center px-4 gap-3 py-3 justify-center font-medium text-black bg-[#FFD506] rounded-xl  cursor-pointer'>
+                <span className=" ">
                   Start Your Project
                 </span>
+                <img src="/arrow1.png" alt="" />
               </Link>
-               <Link href="/contact" passHref>
-                <span className=" font-medium text-[#FFD506] border border-[#FFD506] px-5 py-3 rounded-xl  cursor-pointer">
+               <Link href="/contact" passHref className=' flex items-center justify-center gap-3 font-medium text-[#FFD506] border border-[#FFD506] px-5 py-3 rounded-xl  cursor-pointer'>
+                <span className=" ">
                   View Portfolio
                 </span>
+                                <img src="/arrow2.png" alt="" className=''/>
+
               </Link>
           </div>
         </div>
