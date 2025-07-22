@@ -29,7 +29,7 @@ const Hero = () => {
       <div className='bg-black min-h-screen flex items-center justify-center relative'>
         <div className='h-[50vw] w-[50vw] bg-[#FFD506] rounded-full blur-[20vh] opacity-20'></div>
 
-        <div id='main' className='absolute top-[25%] w-full px-4 flex flex-col items-center justify-center text-center'>
+        <div id='main' className='absolute top-[18%] w-full px-4 flex flex-col items-center justify-center text-center'>
           <h1 className='text-[8vw] md:text-[5vw] font-bold text-[#FFD506]'>Run RamScript</h1>
           <h1 className='text-[8vw] md:text-[5vw] font-bold text-[#FFFFFF] leading-15'>Once, and You’re Set.</h1>
 
