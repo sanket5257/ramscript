@@ -34,7 +34,7 @@ const Hero = () => {
           <h1 className='text-[8vw] md:text-[5vw] font-bold text-[#FFFFFF] leading-15'>Once, and You’re Set.</h1>
 
           {/* 🔗 Buttons */}
-          <div className='mt-20 flex flex-col md:flex-row gap-10 w-full max-w-3xl'>
+          <div className='mt-20 flex flex-col md:flex-row justify-center items-center gap-10 w-full max-w-3xl'>
             <Link
               href="/contact"
               passHref
