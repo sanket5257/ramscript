@@ -36,7 +36,7 @@ const moveBlurRandomly = () => {
       {/* ✅ Only this blur remains and moves randomly */}
      <div
   ref={bgGlowRef}
-  className="fixed top-0 left-0 z-10 h-[300px] w-[300px] bg-[#FFD506] rounded-full blur-[150px] opacity-40 pointer-events-none transition-transform duration-[2000ms] ease-in-out"
+  className="fixed top-0 left-0 z-10 h-[300px] w-[300px] bg-[#FFD506] rounded-full blur-[150px] opacity-40 pointer-events-none transition-transform duration-[5000ms] ease-in-out"
 />
 
 
