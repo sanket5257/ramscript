@@ -74,14 +74,14 @@ const Hero = () => {
             ].map((service, idx) => (
               <div
                 key={idx}
-                className='group relative bg-[#1E1E1E] border border-[#FFD506] rounded-xl h-auto w-full md:h-[12vw] md:w-[24vw] flex flex-col items-start justify-center gap-3 p-5 overflow-hidden transition-transform duration-300 hover:scale-[1.05]'
+                className='group relative  bg-[#1E1E1E] border border-[#FFD506] rounded-xl h-auto w-full md:h-[12vw] md:w-[24vw] flex flex-col items-start justify-center gap-3 p-5 overflow-hidden transition-transform duration-300 hover:scale-[1.05]'
               >
                 <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute inset-0 bg-gradient-to-tr from-yellow-300 via-[#FF6FD8] to-[#3813C2] opacity-20 mix-blend-screen blur-2xl"></div>
                 </div>
                 <img src={service.icon} alt="" />
-                <h1 className='font-bold'>{service.title}</h1>
-                <h2 className='text-start'>{service.desc}</h2>
+                <h1 className='font-bold text-white'>{service.title}</h1>
+                <h2 className='text-start text-white'>{service.desc}</h2>
               </div>
             ))}
           </div>
