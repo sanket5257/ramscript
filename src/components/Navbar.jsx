@@ -31,7 +31,7 @@ export default function Navbar() {
                   About
                 </span>
               </Link>
-              <Link href="/contact" passHref>
+              <Link href="/#services" passHref>
                 <span className=" font-medium text-white hover:text-[#FFD506] cursor-pointer">
                   Services
                 </span>
