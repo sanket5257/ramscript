@@ -24,9 +24,11 @@ const Card = ({ direction = 'left' }) => {
   return (
     <div
       ref={ref}
-      className={`rounded-[10px] border border-[#FFD506] flex flex-col px-6 pt-6 pb-8 transition-all duration-700 ease-out
+      className={`rounded-[10px] border border-[#FFD506] flex flex-col px-6 pt-6 pb-8 transition-all duration-700 ease-out transform
         ${isVisible ? 'translate-x-0 opacity-100' : direction === 'left' ? '-translate-x-20 opacity-0' : 'translate-x-20 opacity-0'}
-      group cursor-pointer`}
+        group cursor-pointer 
+        hover:scale-105 hover:shadow-[0_0_30px_#FFD506] hover:border-[#fff300]
+      `}
       style={{
         width: '346.401px',
         height: '318px',
@@ -59,6 +61,7 @@ const Card = ({ direction = 'left' }) => {
     </div>
   );
 };
+
 
 // SERVICES SECTION
 const Services = () => (
