@@ -35,11 +35,11 @@ const Footer = () => {
 
         <div className='flex flex-col justify-center items-start gap-3' >
             
-            <h1 className='font-extrabold text-xl'>Say Hello</h1>
-            <h3 className='text-[#C9C9C9] font-medium'>info@ramscript.com</h3>
-            <h3 className='text-[#C9C9C9] font-medium'>+91 8857880000 </h3>
-            <h3 className='text-[#C9C9C9] font-medium'>Linkedin</h3>
-            <h3 className='text-[#C9C9C9] font-medium'>Instagram</h3>
+            <a href='' className='font-extrabold text-xl'>Say Hello</a>
+            <a href='mailto:info@ramscript.com' className='text-[#C9C9C9] font-medium'>info@ramscript.com</a>
+            <a href='tel:+91 8857880000' className='text-[#C9C9C9] font-medium'>+91 8857880000 </a>
+            <a href='' className='text-[#C9C9C9] font-medium'>Linkedin</a>
+            <a href='' className='text-[#C9C9C9] font-medium'>Instagram</a>
             
         </div>
             
