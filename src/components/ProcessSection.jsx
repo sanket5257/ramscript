@@ -8,33 +8,33 @@ const steps = [
     step: '01',
   },
   {
-    title: 'Wireframing',
-    desc: 'Once the scope is defined, our UX team creates low-fidelity wireframes that map out layout, flow, and content hierarchy. These blueprints help visualize how users will navigate the product and ensure functionality is considered from the ground up.',
-    icon: '📐',
-    step: '02',
-  },
-  {
     title: 'Design',
-    desc: 'We transform wireframes into high-fidelity, interactive UI designs that reflect your brand identity and user expectations. Our designers focus on accessibility, clarity, and usability—ensuring every screen is intuitive and visually engaging.',
+    desc: 'We transform ideas into high-fidelity, interactive UI designs that reflect your brand identity and user expectations. Our designers focus on accessibility, clarity, and usability—ensuring every screen is intuitive and visually engaging.',
     icon: '🎨',
-    step: '03',
+    step: '02',
   },
   {
     title: 'Development',
     desc: 'Our frontend and backend developers work together to build a pixel-perfect, scalable, and optimized product. We follow best coding practices, integrate necessary APIs, and ensure responsiveness across all modern devices and browsers.',
     icon: '💻',
-    step: '04',
+    step: '03',
   },
   {
     title: 'Testing',
     desc: 'Before launch, we rigorously test the product using manual and automated tools. Our QA team identifies bugs, validates features, and ensures the platform is secure, performant, and ready for production.',
     icon: '🧪',
-    step: '05',
+    step: '04',
   },
   {
     title: 'Launch & Support',
     desc: 'After deployment, we monitor for any issues, provide ongoing updates, and handle enhancements. We’re committed to long-term success and remain available for continuous improvement, scaling, or new feature development.',
     icon: '🚀',
+    step: '05',
+  },
+  {
+    title: 'Monitoring & Optimization',
+    desc: 'We continuously monitor performance, analyze user behavior, and optimize key metrics such as speed, engagement, and SEO. Insights from real usage help us improve product quality and maintain top-notch user experience.',
+    icon: '📊',
     step: '06',
   },
 ];
@@ -45,7 +45,7 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
         {/* Left Text */}
         <div className="md:col-span-1">
-          <h2 className="text-3xl font-extrabold leading-snug mb-4">
+          <h2 className="text-3xl font-bold leading-snug mb-4">
             Key Steps in <span className="text-[#FFD506]">Our Process</span>
           </h2>
           <p className="text-gray-400 mb-6">
