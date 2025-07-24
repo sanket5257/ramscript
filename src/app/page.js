@@ -3,6 +3,7 @@ import Hero from './Hero'
 import Services from '@/components/Services'
 import Navbar from '@/components/Navbar'
 import Contact from '@/components/Contact'
+import WhyChooseUs from '@/components/WhyChooseUs'
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
       <Navbar/>
       <Hero/>
       < Services/>
+      <WhyChooseUs/>
       <Contact/>
     </div>
   )
