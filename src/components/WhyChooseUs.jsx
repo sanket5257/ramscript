@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={idx}
-                className={`bg-[#1a1a1a] border border-[#FFD506]/40 p-6 rounded-xl shadow-md hover:shadow-yellow-500/20 hover:scale-[1.03] transition-all duration-300 ease-in-out ${
+                className={`bg-[#1a1a1a] border border-[#FFD506]/40 p-6 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-[1.03] hover:drop-shadow-[0_0_12px_#FFD506] ${
                   isCenterCol ? 'lg:row-span-2' : ''
                 }`}
               >
