@@ -4,6 +4,7 @@ import Services from '@/components/Services'
 import Navbar from '@/components/Navbar'
 import Contact from '@/components/Contact'
 import WhyChooseUs from '@/components/WhyChooseUs'
+import ProcessSection from '@/components/ProcessSection'
 
 const page = () => {
   return (
@@ -12,6 +13,7 @@ const page = () => {
       <Hero/>
       < Services/>
       <WhyChooseUs/>
+      <ProcessSection/>
       <Contact/>
     </div>
   )
