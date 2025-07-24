@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
   return (
     <section className="bg-black text-white py-16 px-4 sm:px-6 lg:px-16">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-12">
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-12">
           Why <span className="text-[#FFD506]">Choose Us?</span>
         </h2>
 

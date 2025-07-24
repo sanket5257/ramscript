@@ -45,7 +45,7 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
         {/* Left Text */}
         <div className="md:col-span-1">
-          <h2 className="text-3xl font-bold leading-snug mb-4">
+          <h2 className="text-3xl font-extrabold leading-snug mb-4">
             Key Steps in <span className="text-[#FFD506]">Our Process</span>
           </h2>
           <p className="text-gray-400 mb-6">
