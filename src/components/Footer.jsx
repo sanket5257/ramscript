@@ -11,7 +11,7 @@ const Footer = () => {
             <h1 className='font-extrabold text-3xl'>Start Your Project</h1>
             <h3>Let's create your next big idea.</h3>
             <Link
-              href="/contact"
+              href="/#contact"
               passHref
               className=' text-center flex items-center mt-2 px-4 gap-3 py-3 justify-center font-medium text-black bg-[#FFD506] rounded-xl cursor-pointer'
             >

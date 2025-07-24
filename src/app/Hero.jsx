@@ -56,7 +56,7 @@ const moveBlurRandomly = () => {
           {/* 🔗 Buttons */}
           <div className="mt-20 flex flex-col md:flex-row justify-center items-center gap-10 w-full max-w-3xl">
             <Link
-              href="/contact"
+              href="/#contact"
               className="w-full md:w-auto text-center flex items-center px-4 gap-3 py-3 justify-center font-medium text-black bg-[#FFD506] rounded-xl cursor-pointer"
             >
               <span>Start Your Project</span>

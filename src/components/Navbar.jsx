@@ -41,7 +41,7 @@ export default function Navbar() {
                   Portfolio
                 </span>
               </Link>
-              <Link href="/contact" passHref>
+              <Link href="/#contact" passHref>
                 <span className=" font-medium text-black bg-[#FFD506] px-5 py-2 rounded-xl  cursor-pointer">
                   Get in Touch
                 </span>
