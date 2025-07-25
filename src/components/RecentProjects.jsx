@@ -18,7 +18,6 @@ const projects = [
     tags: ['Financial Services', 'Wealth Management'],
     services: 'UI/UX Design • Webflow • Strategy',
   },
-  // Add more projects if needed
 ]
 
 export default function RecentProjects() {
@@ -47,7 +46,7 @@ export default function RecentProjects() {
             drive results for businesses worldwide.
           </p>
 
-          <button className="bg-white text-black px-6 py-3 rounded-full border hover:bg-gray-100 transition">
+          <button className="bg-[#FFD506] text-black px-6 py-3 rounded-2xl hover:bg-gray-100 transition">
             Explore All Projects
           </button>
 
@@ -68,37 +67,38 @@ export default function RecentProjects() {
           </div>
         </div>
 
-        {/* RIGHT SIDE - Show one project at a time */}
-        <div className="w-full">
-          <div className="transition-all duration-500 ease-in-out">
-            <div className="bg-white rounded-xl shadow-md">
-              <div className="bg-[#d9d9d9] rounded-t-xl p-4">
-                <p className="font-semibold text-2xl mb-2">{projects[activeIndex].title}</p>
-                <div className="overflow-hidden rounded-lg">
-                  <img
-                    src={projects[activeIndex].image}
-                    alt={projects[activeIndex].title}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
+        {/* RIGHT SIDE - Medium size card with fixed height */}
+        <div className="w-full max-w-md mx-auto h-[30vw] flex items-start">
+          <div className="bg-white rounded-xl shadow-md w-full h-full overflow-hidden flex flex-col">
+            {/* Top: Image + title */}
+            <div className="bg-[#d9d9d9] rounded-t-xl p-4">
+              <p className="font-semibold text-xl mb-2">{projects[activeIndex].title}</p>
+              <div className="overflow-hidden rounded-lg">
+                <img
+                  src={projects[activeIndex].image}
+                  alt={projects[activeIndex].title}
+                  className="w-full h-[220px] object-cover"
+                />
               </div>
-              <div className="px-4 py-3">
-                <div className="text-sm text-gray-500 mb-1">
-                  {projects[activeIndex].services}
-                </div>
-                <h3 className="font-semibold text-base mb-3">
-                  {projects[activeIndex].description}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {projects[activeIndex].tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="bg-gray-200 text-sm rounded-full px-3 py-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+            </div>
+
+            {/* Bottom: Description & tags */}
+            <div className="px-4 py-3 overflow-y-auto">
+              <div className="text-sm text-gray-500 mb-2">
+                {projects[activeIndex].services}
+              </div>
+              <h3 className="font-medium text-base mb-3 leading-snug">
+                {projects[activeIndex].description}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {projects[activeIndex].tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="bg-gray-200 text-sm rounded-full px-3 py-1"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
