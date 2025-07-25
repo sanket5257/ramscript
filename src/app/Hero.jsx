@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { FaCode, FaPaintBrush, FaCloudUploadAlt } from 'react-icons/fa'
+
 
 const Hero = () => {
   const bgGlowRef = useRef(null);
@@ -83,37 +85,39 @@ const moveBlurRandomly = () => {
             className="flex flex-col md:flex-row items-center justify-center mt-20 gap-10 w-full px-4"
           >
             {[
-              {
-                title: 'Development',
-                desc:
-                  'Reprehenderit at, libero perferendis omnis voluptas illo! Obcaecati nostrum eveniet rerum porro eli',
-                icon: '/devicon.png',
-              },
-              {
-                title: 'Design',
-                desc:
-                  'Crafting smooth UI with bold aesthetics that stand out & convert visitors into clients.',
-                icon: '/devicon.png',
-              },
-              {
-                title: 'Deployment',
-                desc:
-                  'Seamless cloud hosting, domain setup & performance tweaks for production-ready web.',
-                icon: '/devicon.png',
-              },
-            ].map((service, idx) => (
-              <div
-                key={idx}
-                className="group relative bg-[#1E1E1E] border border-[#FFD506] rounded-xl h-auto w-full md:h-[12vw] md:w-[24vw] flex flex-col items-start justify-center gap-3 p-5 overflow-hidden transition-transform duration-300 hover:scale-[1.05]"
-              >
-                <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-yellow-300 via-[#FF6FD8] to-[#3813C2] opacity-20 mix-blend-screen blur-2xl"></div>
-                </div>
-                <img src={service.icon} alt="" />
-                <h1 className="font-bold text-white">{service.title}</h1>
-                <h2 className="text-start text-white">{service.desc}</h2>
-              </div>
-            ))}
+  {
+    title: 'Development',
+    desc:
+      'Reprehenderit at, libero perferendis omnis voluptas illo! Obcaecati nostrum eveniet rerum porro eli',
+    icon: <FaCode className="text-yellow-400 w-7 h-7" />,
+  },
+  {
+    title: 'Design',
+    desc:
+      'Crafting smooth UI with bold aesthetics that stand out & convert visitors into clients.',
+    icon: <FaPaintBrush className="text-yellow-400 w-7 h-7" />,
+  },
+  {
+    title: 'Deployment',
+    desc:
+      'Seamless cloud hosting, domain setup & performance tweaks for production-ready web.',
+    icon: <FaCloudUploadAlt className="text-yellow-400 w-7 h-7" />,
+  },
+].map((service, idx) => (
+  <div
+    key={idx}
+    className="group relative bg-[#1E1E1E] border border-[#FFD506] rounded-xl h-auto w-full md:h-[12vw] md:w-[24vw] flex flex-col items-start justify-center gap-3 p-5 overflow-hidden transition-transform duration-300 hover:scale-[1.05]"
+  >
+    <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute inset-0 bg-gradient-to-tr from-yellow-300 via-[#FF6FD8] to-[#3813C2] opacity-20 mix-blend-screen blur-2xl"></div>
+    </div>
+    {/* ✅ React Icon inserted here */}
+    {service.icon}
+    <h1 className="font-bold text-white">{service.title}</h1>
+    <h2 className="text-start text-white">{service.desc}</h2>
+  </div>
+))}
+
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 
@@ -43,6 +43,32 @@ const teamMembers = [
 ]
 
 const TeamSection = () => {
+  const cardsRef = useRef([])
+  const [visibleIndexes, setVisibleIndexes] = useState([])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setVisibleIndexes((prev) => [...new Set([...prev, index])])
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card)
+    })
+
+    return () => {
+      cardsRef.current.forEach((card) => {
+        if (card) observer.unobserve(card)
+      })
+    }
+  }, [])
+
   return (
     <section className="bg-black text-white py-16 px-6">
       <div className="max-w-7xl mx-auto text-center">
@@ -53,7 +79,13 @@ const TeamSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="bg-[#1a1a1a] rounded-lg overflow-hidden p-6 text-center">
+            <div
+              key={index}
+              ref={(el) => (cardsRef.current[index] = el)}
+              className={`bg-[#1a1a1a] rounded-lg overflow-hidden p-6 text-center transform transition-all duration-700 ease-out
+              ${visibleIndexes.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}
+            `}
+            >
               <div className="w-full h-60 relative mb-4">
                 <Image
                   src={member.image}
