@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Contact from '@/components/Contact'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import ProcessSection from '@/components/ProcessSection'
+import TeamSection from '@/components/TeamSection'
 
 const page = () => {
   return (
@@ -12,6 +13,7 @@ const page = () => {
       <Navbar/>
       <Hero/>
       < Services/>
+      <TeamSection/>
       <WhyChooseUs/>
       <ProcessSection/>
       <Contact/>
