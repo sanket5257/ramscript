@@ -1,52 +1,65 @@
 'use client';
+import {
+  FaBullseye,
+  FaLaptopCode,
+  FaBrain,
+  FaPauseCircle,
+  FaHandPaper,
+  FaBolt,
+  FaFileSignature,
+  FaDollarSign,
+  FaRedo,
+} from 'react-icons/fa'
+
 
 const features = [
   {
     title: 'Premium Quality',
     desc: 'Predictable and consistently high design and coding standard with great technical abilities.',
-    icon: '🎯',
+    icon: <FaBullseye className="text-3xl text-yellow-400" />,
   },
   {
     title: 'Comprehensive Solutions',
     desc: 'We provide end-to-end services, from initial design to deployment and maintenance.',
-    icon: '💻',
+    icon: <FaLaptopCode className="text-3xl text-yellow-400" />,
   },
   {
     title: 'Customer-Centric Approach',
     desc: 'We prioritize your needs and tailor solutions to meet your goals.',
-    icon: '🧠',
+    icon: <FaBrain className="text-3xl text-yellow-400" />,
   },
   {
     title: 'Pause Anytime',
     desc: 'Pause and resume your subscription, based on your requirements.',
-    icon: '⏸️',
+    icon: <FaPauseCircle className="text-3xl text-yellow-400" />,
   },
   {
     title: 'Zero Hand Holding',
     desc: 'Our designers and developers are self-led and our process is streamlined.',
-    icon: '🖐️',
+    icon: <FaHandPaper className="text-3xl text-yellow-400" />,
   },
   {
     title: 'Fast Delivery',
     desc: 'We don’t rush, we’re just fast! We hope you\'re ready to keep up.',
-    icon: '⚡',
+    icon: <FaBolt className="text-3xl text-yellow-400" />,
   },
   {
     title: '100% NDA Abiding',
     desc: 'We protect your big ideas with strict contracts from the start.',
-    icon: '📝',
+    icon: <FaFileSignature className="text-3xl text-yellow-400" />,
   },
   {
     title: 'Fixed Affordable Rate',
     desc: 'No hidden fees or surprises. Transparent and predictable pricing.',
-    icon: '💰',
+    icon: <FaDollarSign className="text-3xl text-yellow-400" />,
   },
   {
     title: 'Unlimited Revisions',
     desc: 'Revise until you’re 100% satisfied.',
-    icon: '🔁',
+    icon: <FaRedo className="text-3xl text-yellow-400" />,
   },
-];
+]
+
 
 export default function WhyChooseUs() {
   return (

@@ -1,5 +1,7 @@
 'use client'
 import { useState } from 'react'
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
+
 
 const projects = [
   {
@@ -51,20 +53,22 @@ export default function RecentProjects() {
           </button>
 
           {/* Arrows */}
-          <div className="flex gap-4 pt-6">
-            <button
-              onClick={goLeft}
-              className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
-            >
-              ←
-            </button>
-            <button
-              onClick={goRight}
-              className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
-            >
-              →
-            </button>
-          </div>
+          {/* Arrows */}
+<div className="flex gap-4 pt-6">
+  <button
+    onClick={goLeft}
+    className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
+  >
+    <FiChevronLeft className="w-6 h-6" />
+  </button>
+  <button
+    onClick={goRight}
+    className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
+  >
+    <FiChevronRight className="w-6 h-6" />
+  </button>
+</div>
+
         </div>
 
         {/* RIGHT SIDE - Medium size card with fixed height */}
