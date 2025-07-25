@@ -6,12 +6,14 @@ import Contact from '@/components/Contact'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import ProcessSection from '@/components/ProcessSection'
 import TeamSection from '@/components/TeamSection'
+import About from '@/components/About'
 
 const page = () => {
   return (
     <div>
       <Navbar/>
       <Hero/>
+      <About/>
       < Services/>
       <TeamSection/>
       <WhyChooseUs/>
