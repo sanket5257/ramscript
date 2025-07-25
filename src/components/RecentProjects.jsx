@@ -32,21 +32,21 @@ export default function RecentProjects() {
   }
 
   return (
-    <section className="bg-[#f8f8f8] text-black py-16 px-4 lg:px-20">
+    <section className="bg-black text-white py-16 px-4 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/* LEFT SIDE */}
         <div className="space-y-6">
           <h2 className="text-4xl font-extrabold leading-tight">
             Some of <br />
             our recent <br />
-            <span className="text-[#FFD506]">work</span>
+            <span className="text-yellow-400">work</span>
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-300 text-lg">
             Explore our portfolio of exceptional web design and custom Webflow websites that
             drive results for businesses worldwide.
           </p>
 
-          <button className="bg-[#FFD506] text-black px-6 py-3 rounded-2xl hover:bg-gray-100 transition">
+          <button className="bg-yellow-400 text-black px-6 py-3 rounded-2xl hover:bg-yellow-300 transition">
             Explore All Projects
           </button>
 
@@ -54,13 +54,13 @@ export default function RecentProjects() {
           <div className="flex gap-4 pt-6">
             <button
               onClick={goLeft}
-              className="w-12 h-12 rounded-full bg-black text-white text-xl flex items-center justify-center shadow"
+              className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
             >
               ←
             </button>
             <button
               onClick={goRight}
-              className="w-12 h-12 rounded-full bg-black text-white text-xl flex items-center justify-center shadow"
+              className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
             >
               →
             </button>
@@ -69,32 +69,30 @@ export default function RecentProjects() {
 
         {/* RIGHT SIDE - Medium size card with fixed height */}
         <div className="w-full max-w-md mx-auto h-[30vw] flex items-start">
-          <div className="bg-white rounded-xl shadow-md w-full h-full overflow-hidden flex flex-col">
+          <div className="bg-[#111111] rounded-xl shadow-md w-full h-full overflow-hidden flex flex-col border border-yellow-500">
             {/* Top: Image + title */}
-            <div className="bg-[#d9d9d9] rounded-t-xl p-4">
-              <p className="font-semibold text-xl mb-2">{projects[activeIndex].title}</p>
+            <div className="bg-[#1a1a1a] rounded-t-xl p-4 border-b border-yellow-500">
+              <p className="font-semibold text-xl mb-2 text-yellow-400">{projects[activeIndex].title}</p>
               <div className="overflow-hidden rounded-lg">
                 <img
                   src={projects[activeIndex].image}
                   alt={projects[activeIndex].title}
-                  className="w-full h-[220px] object-cover"
+                  className="w-full h-[220px] object-cover rounded-md"
                 />
               </div>
             </div>
 
             {/* Bottom: Description & tags */}
-            <div className="px-4 py-3 overflow-y-auto">
-              <div className="text-sm text-gray-500 mb-2">
-                {projects[activeIndex].services}
-              </div>
-              <h3 className="font-medium text-base mb-3 leading-snug">
+            <div className="px-4 py-3 overflow-y-auto text-sm text-gray-300 space-y-3">
+              <div className="text-yellow-300 font-medium">{projects[activeIndex].services}</div>
+              <h3 className="font-medium text-base leading-snug text-white">
                 {projects[activeIndex].description}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {projects[activeIndex].tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="bg-gray-200 text-sm rounded-full px-3 py-1"
+                    className="bg-yellow-500 text-black text-xs font-semibold rounded-full px-3 py-1"
                   >
                     {tag}
                   </span>
