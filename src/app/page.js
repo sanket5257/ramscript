@@ -7,6 +7,7 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 import ProcessSection from '@/components/ProcessSection'
 import TeamSection from '@/components/TeamSection'
 import About from '@/components/About'
+import RecentProjects from '@/components/RecentProjects'
 
 const page = () => {
   return (
@@ -15,8 +16,10 @@ const page = () => {
       <Hero/>
       <About/>
       < Services/>
+      <RecentProjects/>
       <TeamSection/>
       <WhyChooseUs/>
+      
       <ProcessSection/>
       <Contact/>
     </div>
