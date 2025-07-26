@@ -115,7 +115,7 @@ const AnimatedStep = ({ title, desc, icon, step }) => {
           <h3 className="text-xl font-semibold text-[#FFD506]">{title}</h3>
           <span className="text-lg font-bold text-white opacity-30">{step}</span>
         </div>
-        <p className="text-sm text-gray-300 mt-2 leading-relaxed">
+        <p className=" text-gray-300 mt-2 leading-relaxed">
           {desc}
         </p>
       </div>

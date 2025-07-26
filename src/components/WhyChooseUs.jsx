@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
               >
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-lg font-bold mb-2 text-[#FFD506]">{feature.title}</h3>
-                <p className="text-sm text-gray-300">{feature.desc}</p>
+                <p className=" text-gray-300">{feature.desc}</p>
               </div>
             );
           })}

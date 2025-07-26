@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 
-
 const projects = [
   {
     title: 'Hopstack',
@@ -24,12 +23,20 @@ const projects = [
 
 export default function RecentProjects() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isAnimating, setIsAnimating] = useState(false)
+
+  const triggerAnimation = () => {
+    setIsAnimating(true)
+    setTimeout(() => setIsAnimating(false), 300)
+  }
 
   const goLeft = () => {
+    triggerAnimation()
     setActiveIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1))
   }
 
   const goRight = () => {
+    triggerAnimation()
     setActiveIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1))
   }
 
@@ -53,30 +60,35 @@ export default function RecentProjects() {
           </button>
 
           {/* Arrows */}
-          {/* Arrows */}
-<div className="flex gap-4 pt-6">
-  <button
-    onClick={goLeft}
-    className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
-  >
-    <FiChevronLeft className="w-6 h-6" />
-  </button>
-  <button
-    onClick={goRight}
-    className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
-  >
-    <FiChevronRight className="w-6 h-6" />
-  </button>
-</div>
-
+          <div className="flex gap-4 pt-6">
+            <button
+              onClick={goLeft}
+              className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
+            >
+              <FiChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={goRight}
+              className="w-12 h-12 rounded-full bg-yellow-400 text-black text-xl flex items-center justify-center shadow hover:bg-yellow-300"
+            >
+              <FiChevronRight className="w-6 h-6" />
+            </button>
+          </div>
         </div>
 
         {/* RIGHT SIDE - Medium size card with fixed height */}
         <div className="w-full max-w-md mx-auto h-[30vw] flex items-start">
-          <div className="bg-[#111111] rounded-xl shadow-md w-full h-full overflow-hidden flex flex-col border border-yellow-500">
+          <div
+            className={`bg-[#111111] rounded-xl shadow-md w-full h-full overflow-hidden flex flex-col border border-yellow-500 
+              transform transition-all duration-300 ease-in-out
+              ${isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}
+            `}
+          >
             {/* Top: Image + title */}
             <div className="bg-[#1a1a1a] rounded-t-xl p-4 border-b border-yellow-500">
-              <p className="font-semibold text-xl mb-2 text-yellow-400">{projects[activeIndex].title}</p>
+              <p className="font-semibold text-xl mb-2 text-yellow-400">
+                {projects[activeIndex].title}
+              </p>
               <div className="overflow-hidden rounded-lg">
                 <img
                   src={projects[activeIndex].image}

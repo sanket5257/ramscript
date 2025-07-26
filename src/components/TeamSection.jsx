@@ -98,10 +98,10 @@ const TeamSection = () => {
                 <span className="bg-yellow-400 text-black p-2 rounded-full text-sm">
                   {member.social.icon}
                 </span>
-                <span className="text-gray-400 text-sm">{member.social.label}</span>
+                <span className="text-gray-400">{member.social.label}</span>
               </div>
               <h3 className="text-lg font-semibold">{member.name}</h3>
-              <p className="text-yellow-400 text-sm">{member.role}</p>
+              <p className="text-yellow-400 ">{member.role}</p>
             </div>
           ))}
         </div>

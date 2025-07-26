@@ -50,7 +50,7 @@ const moveBlurRandomly = () => {
           className="absolute top-[5%] w-full px-4 flex flex-col items-center justify-center text-center"
         >
           <div className='border border-[#ffd60679] px-8 py-6 rounded-2xl text-white mb-5 opacity-0 animate-fadeUp animation-delay-[600ms] flex justify-between items-center gap-2 w-full max-w-5xl'>
-            <h1 className='font-bold text-left'>6.5X Cheaper than <br /> a Full-time software Engineer</h1>
+            <h1 className='font-bold text-left'>6.5x Cheaper than <br /> a Full-time software Engineer</h1>
             <h1 className='font-medium text-left'>That means $100,000 saved a year with our $1599 monthly subscription. <br /> Every year</h1>
           </div>
           <h1 className="text-[8vw] md:text-[5vw] font-bold text-[#FFD506] opacity-0 animate-fadeUp animate-type animation-delay-[200ms]">

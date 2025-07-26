@@ -8,6 +8,7 @@ import ProcessSection from '@/components/ProcessSection'
 import TeamSection from '@/components/TeamSection'
 import About from '@/components/About'
 import RecentProjects from '@/components/RecentProjects'
+import Testimonials from '@/components/Testimonials'
 
 const page = () => {
   return (
@@ -21,6 +22,7 @@ const page = () => {
       <WhyChooseUs/>
       
       <ProcessSection/>
+      <Testimonials/>
       <Contact/>
     </div>
   )
