@@ -7,8 +7,7 @@ import {
   FaSearch,
   FaBullhorn,
   FaTools,
-} from 'react-icons/fa'
-
+} from 'react-icons/fa';
 
 const services = [
   {
@@ -47,9 +46,7 @@ const services = [
     icon: <FaTools className="text-yellow-400 w-6 h-6" />,
     direction: 'right',
   },
-]
-
-
+];
 
 // Card Component
 const Card = ({ icon, title, desc, direction }) => {
@@ -73,7 +70,8 @@ const Card = ({ icon, title, desc, direction }) => {
         ${isVisible ? 'translate-x-0 opacity-100' : direction === 'left' ? '-translate-x-20 opacity-0' : 'translate-x-20 opacity-0'}
         group cursor-pointer 
         hover:scale-105 hover:shadow-[0_0_30px_#FFD506] hover:border-[#fff300]
-        w-full h-[20vw] max-w-[346px] mx-auto sm:mx-0
+        w-full md:h-[20vw] max-w-[300px] mx-auto sm:mx-0
+        min-w-[85%] sm:min-w-[300px] md:min-w-0
       `}
       style={{
         background: 'rgba(18, 18, 19, 1)',
@@ -111,20 +109,25 @@ const Services = () => (
     <p className="text-[#D9D9D9] text-[16px] sm:text-[18px] md:text-[20px] text-center max-w-[700px] mx-auto mb-12 font-inter">
       Results-focused solutions tailored to your specific business goals
     </p>
-    <div className="flex flex-wrap justify-center gap-6 md:gap-[31px]">
+
+    {/* ✅ Scrollable on mobile, flex-wrapped on larger screens */}
+    <div className="flex md:flex-wrap flex-nowrap gap-6 md:gap-[31px] overflow-x-auto md:overflow-visible scroll-snap-x scroll-smooth md:justify-center">
       {services.map((service, i) => (
-        <Card key={i} {...service} />
+        <div className="snap-start shrink-0 md:shrink" key={i}>
+          <Card {...service} />
+        </div>
       ))}
     </div>
   </section>
 );
 
-function App() {
+// Main Export
+const App = () => {
   return (
     <div id="services">
       <Services />
     </div>
   );
-}
+};
 
 export default App;

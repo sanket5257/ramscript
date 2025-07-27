@@ -43,10 +43,18 @@ const testimonials = [
 export default function Testimonials() {
   const [index, setIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
 
-  const visibleCards = 6
+  const visibleCards = isMobile ? 1 : 6
   const total = testimonials.length
   const extended = [...testimonials, ...testimonials.slice(0, visibleCards)]
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,12 +71,12 @@ export default function Testimonials() {
     }, 4000)
 
     return () => clearInterval(interval)
-  }, [index])
+  }, [index, total])
 
   return (
     <section className="bg-black text-white py-20 px-6 overflow-hidden">
       {/* Heading */}
-<div className="text-center mb-12">
+      <div className="text-center mb-12">
         <p className="text-yellow-400 font-semibold tracking-wide">★ Testimonials</p>
         <h2 className="text-4xl font-bold mt-2">Our happy clients</h2>
         <p className="text-gray-400 mt-2">
@@ -90,8 +98,6 @@ export default function Testimonials() {
         ))}
       </div>
 
-
-
       {/* Carousel */}
       <div className="relative max-w-7xl mx-auto overflow-hidden">
         <div
@@ -103,31 +109,30 @@ export default function Testimonials() {
           }}
         >
           {extended.map((t, i) => {
-            // i is the actual card position
             const relativePosition = i - index
+            let styleClass = ''
 
-            // Style logic
-            let styleClass =
-              'opacity-30 scale-90 blur-sm z-0 pointer-events-none'
+            if (isMobile) {
+              styleClass = 'opacity-100 scale-100 blur-0 z-10 pointer-events-auto'
+            } else {
+              // Desktop effects
+              styleClass = 'opacity-30 scale-90 blur-sm z-0 pointer-events-none'
 
-            if (relativePosition === 1) {
-              // Center card
-              styleClass =
-                'opacity-100 scale-100 blur-0 z-10 pointer-events-auto'
-            } else if (relativePosition === 1 || relativePosition === 4) {
-              styleClass =
-                'opacity-60 scale-95 blur-[1px] z-0 pointer-events-none'
-            } else if (relativePosition === 3 || relativePosition === 5) {
-              styleClass =
-                'opacity-40 scale-90 blur-sm z-0 pointer-events-none'
+              if (relativePosition === 1) {
+                styleClass = 'opacity-100 scale-100 blur-0 z-10 pointer-events-auto'
+              } else if (relativePosition === 1 || relativePosition === 4) {
+                styleClass = 'opacity-60 scale-95 blur-[1px] z-0 pointer-events-none'
+              } else if (relativePosition === 3 || relativePosition === 5) {
+                styleClass = 'opacity-40 scale-90 blur-sm z-0 pointer-events-none'
+              }
             }
 
             return (
               <div
                 key={i}
-                className={`w-1/6 px-2 flex-shrink-0 transition-all duration-700 ${styleClass}`}
+                className={`w-full ${!isMobile ? 'md:w-1/6' : ''} px-2 flex-shrink-0 transition-all duration-700 ${styleClass}`}
               >
-                <div className="bg-[#111111] border border-yellow-500 rounded-xl p-4 h-full shadow-md">
+                <div className="bg-[#111111] border w-[83vw] md:w-full border-yellow-500 rounded-xl p-4 h-full shadow-md">
                   <p className="text-white text-sm mb-3 leading-relaxed">"{t.message}"</p>
                   <div className="flex items-center gap-2 mt-3">
                     <img
