@@ -28,7 +28,7 @@ const Footer = () => {
           <Link href="/#about" className="text-[#C9C9C9] font-medium">About</Link>
           <Link href="/#services" className="text-[#C9C9C9] font-medium">Services</Link>
           <Link href="/portfolio" className="text-[#C9C9C9] font-medium">Portfolio</Link>
-          <Link href="/career" className="text-[#C9C9C9] font-medium">Careers</Link>
+          <Link href="/careers" className="text-[#C9C9C9] font-medium">Careers</Link>
         </div>
 
         {/* Column 3 */}
