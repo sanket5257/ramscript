@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -52,3 +53,19 @@ body {
     animation-delay: 0.4s;
   }
 }
+
+/* styles/globals.css */
+/* styles/globals.css */
+@keyframes rotate-smooth {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate-smooth {
+  animation: rotate-smooth 2s linear infinite;
+}
+

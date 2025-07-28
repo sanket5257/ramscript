@@ -47,7 +47,7 @@ export default function Navbar() {
             <NavItem label="What we do" href="/#services" onEnter={handleMouseEnter} onLeave={handleMouseLeave}>
               Services
             </NavItem>
-            <NavItem label="Our Work" href="/#projects" onEnter={handleMouseEnter} onLeave={handleMouseLeave}>
+            <NavItem label="Our Work" href="/portfolio" onEnter={handleMouseEnter} onLeave={handleMouseLeave}>
               Portfolio
             </NavItem>
             <NavItem label="Let's Talk" href="/#contact" onEnter={handleMouseEnter} onLeave={handleMouseLeave}>
@@ -85,7 +85,7 @@ export default function Navbar() {
             <Link href="/" passHref><span className="block text-white hover:text-[#FFD506] cursor-pointer">Home</span></Link>
             <Link href="/#about" passHref><span className="block text-white hover:text-[#FFD506] cursor-pointer">About</span></Link>
             <Link href="/#services" passHref><span className="block text-white hover:text-[#FFD506] cursor-pointer">Services</span></Link>
-            <Link href="/#projects" passHref><span className="block text-white hover:text-[#FFD506] cursor-pointer">Portfolio</span></Link>
+            <Link href="/portfolio" passHref><span className="block text-white hover:text-[#FFD506] cursor-pointer">Portfolio</span></Link>
             <Link href="/#contact" passHref>
               <span className="inline-block text-black bg-[#FFD506] px-4 py-2 rounded-xl hover:bg-[#e6c905] transition">Get in Touch</span>
             </Link>
