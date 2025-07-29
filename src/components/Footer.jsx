@@ -1,7 +1,7 @@
-'use client'
-import React from 'react'
-import Link from 'next/link'
-import HoverTracker from './HoverTracker'
+"use client";
+import React from "react";
+import Link from "next/link";
+import HoverTracker from "./HoverTracker";
 
 const Footer = () => {
   return (
@@ -10,8 +10,12 @@ const Footer = () => {
       <div className="bg-[#1E1E1E] text-white flex flex-col md:flex-row justify-evenly items-start p-6 md:p-10 gap-10 md:gap-0">
         {/* Column 1 */}
         <div className="flex flex-col items-start justify-center gap-3 w-full md:w-auto">
-          <h1 className="font-extrabold text-2xl md:text-3xl">Start Your Project</h1>
-          <h3 className="text-base text-[#C9C9C9]">Let's create your next big idea.</h3>
+          <h1 className="font-extrabold text-2xl md:text-3xl">
+            Start Your Project
+          </h1>
+          <h3 className="text-base text-[#C9C9C9]">
+            Let's create your next big idea.
+          </h3>
           <Link
             href="/#contact"
             passHref
@@ -45,7 +49,10 @@ const Footer = () => {
         {/* Column 3 */}
         <div className="flex flex-col justify-center items-start gap-3 w-full md:w-auto">
           <h1 className="font-extrabold text-xl">Say Hello</h1>
-          <a href="mailto:info@ramscript.com" className="text-[#C9C9C9] font-medium">
+          <a
+            href="mailto:info@ramscript.com"
+            className="text-[#C9C9C9] font-medium"
+          >
             <HoverTracker text="info@ramscript.com" />
           </a>
           <a href="tel:+918857880000" className="text-[#C9C9C9] font-medium">
@@ -63,15 +70,17 @@ const Footer = () => {
       {/* Divider & Copyright */}
       <div className="flex flex-col justify-center items-center text-[#C9C9C9] pb-10 px-4">
         <div className="bg-[#C9C9C9] w-full max-w-5xl h-[1px] my-5 " />
-        <div className='flex justify-between max-w-5xl w-full items-center'>
-                    <h1 className="text-center text-sm">© 2025 RamScript Pvt. Ltd. All rights reserved.</h1>
-        <Link href='/privacy_policy' className="text-center text-sm">privacy_policy</Link>
-
-
+        <div className="flex justify-between max-w-5xl w-full items-center">
+          <h1 className="text-center text-sm">
+            © 2025 RamScript Pvt. Ltd. All rights reserved.
+          </h1>
+          <Link href="/privacy_policy" className="text-center text-sm">
+            privacy_policy
+          </Link>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
