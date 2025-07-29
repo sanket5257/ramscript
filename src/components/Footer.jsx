@@ -62,8 +62,13 @@ const Footer = () => {
 
       {/* Divider & Copyright */}
       <div className="flex flex-col justify-center items-center text-[#C9C9C9] pb-10 px-4">
-        <div className="bg-[#C9C9C9] w-full max-w-5xl h-[1px] my-5" />
-        <h1 className="text-center text-sm">© 2025 RamScript Pvt. Ltd. All rights reserved.</h1>
+        <div className="bg-[#C9C9C9] w-full max-w-5xl h-[1px] my-5 " />
+        <div className='flex justify-between max-w-5xl w-full items-center'>
+                    <h1 className="text-center text-sm">© 2025 RamScript Pvt. Ltd. All rights reserved.</h1>
+        <Link href='/privacy_policy' className="text-center text-sm">privacy_policy</Link>
+
+
+        </div>
       </div>
     </div>
   )
