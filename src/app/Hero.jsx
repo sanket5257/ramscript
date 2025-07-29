@@ -74,7 +74,7 @@ const Hero = () => {
               <img src="/arrow1.png" alt="" />
             </Link>
             <Link
-              href="/contact"
+              href="/portfolio"
               className="w-full md:w-auto text-center flex items-center justify-center gap-3 font-medium text-[#FFD506] border border-[#FFD506] px-5 py-3 rounded-xl cursor-pointer"
             >
               <span>View Portfolio</span>
